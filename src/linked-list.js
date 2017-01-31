@@ -30,7 +30,9 @@ class LinkedList {
         return this._tail.data;
     }
 
-    at(index) {}
+    at(index) {
+        return this.atNode(index).data;
+    }
 
     insertAt(index, data) {}
 
