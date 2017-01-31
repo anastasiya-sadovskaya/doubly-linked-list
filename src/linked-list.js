@@ -38,15 +38,27 @@ class LinkedList {
         var newNode = new Node(data);
         if (index === this.length){
             return this.append(data);
-             } else if (index === 0){
+
+        } else if (index === 0){
             if(!this._head){
                  return this.append(data);
+
             } else {
                 let node = this._head;
                 node.prev = newNode;
                 newNode.next = node;
                 this._head = newNode;
             }
+            
+        } else {
+            var node = this.atNode(index);
+            node.prev.next = newNode;
+            newNode.prev = node.prev;
+            newNode.next = node;
+            node.prev = newNode;
+        }
+
+        return this;
     }
 
     isEmpty() {
