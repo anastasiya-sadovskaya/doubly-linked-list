@@ -12,7 +12,9 @@ class LinkedList {
         return this._head.data;
     }
 
-    tail() {}
+    tail() {
+        return this._tail.data;
+    }
 
     at(index) {}
 
