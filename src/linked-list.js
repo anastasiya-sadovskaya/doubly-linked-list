@@ -57,11 +57,17 @@ class LinkedList {
             }else{
                  this._head.next.prev = this._head.prev;
             }
+
         }else if(index === this.length-1){
             this._tail.prev.next = this._tail.next;
-        } else {
 
+        }else {
+            var node = this.atNode(index);
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
         }
+        this.length -= 1;
+        return this;
     }
 
     reverse() {}
@@ -77,7 +83,7 @@ class LinkedList {
         
         return -1;
     }
-    
+
     atNode(index){
         if (index < 0 || index >= this.length){
             console.error('Enter index > 0');
