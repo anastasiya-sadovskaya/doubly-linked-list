@@ -8,7 +8,9 @@ class LinkedList {
 
     append(data) {}
 
-    head() {}
+    head() {
+        return this._head.data;
+    }
 
     tail() {}
 
