@@ -54,9 +54,9 @@ class LinkedList {
         if (index === 0){
             if(this.length === 1){
             this.clear();
-        } else {
-            
-        }
+            }else{
+                 this._head.next.prev = this._head.prev;
+            }
     }
 
     reverse() {}
