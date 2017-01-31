@@ -53,7 +53,7 @@ class LinkedList {
             node = node.next;
         }
         
-        return null;
+        return -1;
     }
 }
 
