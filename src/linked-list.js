@@ -50,7 +50,14 @@ class LinkedList {
         return this;
     }
 
-    deleteAt(index) {}
+    deleteAt(index) {
+        if (index === 0){
+            if(this.length === 1){
+            this.clear();
+        } else {
+            
+        }
+    }
 
     reverse() {}
 
