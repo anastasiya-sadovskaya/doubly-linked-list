@@ -34,7 +34,11 @@ class LinkedList {
         return this.atNode(index).data;
     }
 
-    insertAt(index, data) {}
+    insertAt(index, data) {
+        var newNode = new Node(data);
+        if (index === this.length){
+            return this.append(data);
+    }
 
     isEmpty() {
          return this.length === 0;
