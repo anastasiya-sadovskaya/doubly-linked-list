@@ -42,7 +42,10 @@ class LinkedList {
             if(!this._head){
                  return this.append(data);
             } else {
-                
+                let node = this._head;
+                node.prev = newNode;
+                newNode.next = node;
+                this._head = newNode;
             }
     }
 
