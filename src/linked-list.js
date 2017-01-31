@@ -7,7 +7,20 @@ class LinkedList {
         this.length = 0;
     }
 
-    append(data) {}
+    append(data) {
+        var node = new Node(data);
+        if (!this._head){
+            this._head = node;
+        }else{
+            this._tail.next = node;
+            node.prev = this._tail;
+        }
+
+        this._tail = node;
+        this.length += 1;
+
+        return this;
+    }
 
     head() {
         return this._head.data;
