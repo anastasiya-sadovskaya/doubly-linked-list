@@ -72,7 +72,13 @@ class LinkedList {
         return this;
     }
 
-    reverse() {}
+    reverse() {
+        var head = this._head;
+        this._head = this._tail;
+        this._tail = head;
+
+        return this;
+    }
 
     indexOf(data) {
          var node = this._head;
