@@ -38,6 +38,12 @@ class LinkedList {
         var newNode = new Node(data);
         if (index === this.length){
             return this.append(data);
+             } else if (index === 0){
+            if(!this._head){
+                 return this.append(data);
+            } else {
+                
+            }
     }
 
     isEmpty() {
