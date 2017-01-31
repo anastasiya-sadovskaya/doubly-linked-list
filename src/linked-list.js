@@ -60,7 +60,7 @@ class LinkedList {
         }else if(index === this.length-1){
             this._tail.prev.next = this._tail.next;
         } else {
-            
+
         }
     }
 
@@ -76,6 +76,20 @@ class LinkedList {
         }
         
         return -1;
+    }
+    
+    atNode(index){
+        if (index < 0 || index >= this.length){
+            console.error('Enter index > 0');
+            return null;
+        }
+
+        var node = this._head;
+        for(var i = 0; i < index; i++){
+            node = node.next;
+        }
+
+        return node;
     }
 }
 
