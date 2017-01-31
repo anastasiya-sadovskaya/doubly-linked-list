@@ -44,7 +44,17 @@ class LinkedList {
 
     reverse() {}
 
-    indexOf(data) {}
+    indexOf(data) {
+         var node = this._head;
+        for (var i = 0; i < this.length; i++){
+            if (data === node.data){
+                return i;
+            } 
+            node = node.next;
+        }
+        
+        return null;
+    }
 }
 
 module.exports = LinkedList;
