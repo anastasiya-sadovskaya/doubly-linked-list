@@ -38,7 +38,17 @@ class LinkedList {
          return this.length === 0;
     }
 
-    clear() {}
+    clear() {
+        this._head.data = null;
+        this._head.next = null;
+
+        this._tail.data = null;
+        this._tail.prev = null;
+
+        this.length = 0;
+
+        return this;
+    }
 
     deleteAt(index) {}
 
