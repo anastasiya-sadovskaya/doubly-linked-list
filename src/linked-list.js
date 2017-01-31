@@ -73,6 +73,14 @@ class LinkedList {
     }
 
     reverse() {
+        var node = this._head;
+        for (var i = 0; i < this.length; i++){
+            var tmp = node.next;
+            node.next = node.prev;
+            node.prev = tmp;
+            node = tmp;
+        }
+
         var head = this._head;
         this._head = this._tail;
         this._tail = head;
